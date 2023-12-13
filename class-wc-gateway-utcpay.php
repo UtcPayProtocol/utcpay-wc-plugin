@@ -197,8 +197,8 @@ function wc_utcpay_gateway_init()
         public function init_form_fields()
         {
             $environment = $this->get_option('environment');
-            $api_key    = $environment ? $this->get_option( 'test_api_key' ) : $this->get_option( 'api_key' );
-            $secret_key = $environment ? $this->get_option( 'test_secret_key' ) : $this->get_option( 'secret_key' );
+            $api_key    = $environment=="yes" ? $this->get_option( 'test_api_key' ) : $this->get_option( 'api_key' );
+            $secret_key = $environment=="yes" ? $this->get_option( 'test_secret_key' ) : $this->get_option( 'secret_key' );
 
             $this->form_fields = apply_filters('wc_offline_form_fields', [
                 'enabled' => [
@@ -489,7 +489,8 @@ function wc_utcpay_gateway_init()
         //获取支付环境api
         public function get_environment_api($payment_environment){
             $data = [];
-            if($payment_environment == true){
+
+            if($payment_environment == "yes"){
                 $data['payment_link'] = UTCPAY_SANDBOX_PAY_LINK;
                 $data['payment_api'] = UTCPAY_SANDBOX_API_URL;
             }else{
