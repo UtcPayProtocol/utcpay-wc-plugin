@@ -3,7 +3,7 @@
 /**
  * @wordpress-plugin
  * Plugin Name:             UtcPay Gateway for WooCommerce
- * Plugin URI:              https://github.com/UtcPayProtocol/utcpay-wc-plugin
+ * Plugin URI:              https://github.com/MixPayHQ/mixpay-woocommerce-plugin
  * Description:             Utcpay Cryptocurrency Payment Gateway.
  * Version:                 1.0.0
  * Author:                  UtcPay Payment
@@ -32,6 +32,7 @@ if (! defined('UTCPAY_FOR_WOOCOMMERCE_PLUGIN_DIR')) {
 if (! defined('UTCPAY_FOR_WOOCOMMERCE_ASSET_URL')) {
     define('UTCPAY_FOR_WOOCOMMERCE_ASSET_URL', plugin_dir_url(__FILE__));
 }
+//定义了插件的版本号
 if (! defined('UTCPAY_VERSION_PFW')) {
     define('UTCPAY_VERSION_PFW', '1.0.0');
 }
@@ -40,7 +41,7 @@ if (! defined('UTCPAY_SUPPORT_EMAIL')) {
 }
 
 if (! defined('UTCPAY_SANDBOX_PAY_LINK')) {
-    define('UTCPAY_SANDBOX_PAY_LINK', 'https://payment.sandbox.utcpay.com');
+    define('UTCPAY_SANDBOX_PAY_LINK', 'https://payment-sandbox.utcpay.com');
 }
 if (! defined('UTCPAY_PAY_LINK')) {
     define('UTCPAY_PAY_LINK', 'https://payment.utcpay.com');
@@ -50,7 +51,7 @@ if (! defined('UTCPAY_API_URL')) {
     define('UTCPAY_API_URL', 'https://api.utcpay.com');
 }
 if (! defined('UTCPAY_SANDBOX_API_URL')) {
-    define('UTCPAY_SANDBOX_API_URL', 'https://api.sandbox.utcpay.com');
+    define('UTCPAY_SANDBOX_API_URL', 'https://api-sandbox.utcpay.com');
 }
 
 if (! defined('UTCPAY_CHAIN_LIST_API')) {
@@ -475,9 +476,9 @@ function wc_utcpay_gateway_init()
             $response = wp_remote_get($payment_api.UTCPAY_PAYMENTS_DETAIL."?outTradeNo={$outTradeNo}&outPaymentNo={$outPaymentNo}", [
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'UTC-PAY-KEY'  => $this->api_key,
-                    'UTC-PAY-SIGN' => $sign,
-                    'UTC-PAY-TIMESTAMP' => $timestamp
+                    'X-PAY-KEY'  => $this->api_key,
+                    'X-PAY-SIGN' => $sign,
+                    'X-PAY-TIMESTAMP' => $timestamp
                 ],
             ]);
             $payments_result_data = wp_remote_retrieve_body($response);
@@ -512,9 +513,9 @@ function wc_utcpay_gateway_init()
             $response = wp_remote_get($payment_url['payment_api'].UTCPAY_CHAIN_LIST_API, [
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'UTC-PAY-KEY'  => $api_key,
-                    'UTC-PAY-SIGN' => $sign,
-                    'UTC-PAY-TIMESTAMP' => $timestamp
+                    'X-PAY-KEY'  => $api_key,
+                    'X-PAY-SIGN' => $sign,
+                    'X-PAY-TIMESTAMP' => $timestamp
                 ],
             ]);
             $response_data = wp_remote_retrieve_body($response);
@@ -547,9 +548,9 @@ function wc_utcpay_gateway_init()
                 'body' => $body,
                 'headers' => [
                     'Content-Type' => 'application/json',
-                    'UTC-PAY-KEY'  => $this->api_key,
-                    'UTC-PAY-SIGN' => $sign,
-                    'UTC-PAY-TIMESTAMP' => $timestamp
+                    'X-PAY-KEY'  => $this->api_key,
+                    'X-PAY-SIGN' => $sign,
+                    'X-PAY-TIMESTAMP' => $timestamp
                 ],
             ]);
             $response_data = wp_remote_retrieve_body($response);

@@ -1,16 +1,14 @@
-## UtcPay Crypto Payment Gateway for WooCommerce
+# UtcPay Crypto Payment Gateway for WooCommerce
 
-Contributors: UtcPay Payment Tags: Ethereum,Tether,payments,UtcPay, cryptocurrency,payment gateway,multi-chain,Trustless
-
-Requires at least: 5.5
-
-Tested up to: 6.0
-
-Requires PHP: 7.0+ WC requires at least: 4.9.4
-
-WC tested up to: 6.6.1
-
-Stable tag: 1.0.0 License: GPLv2 or later
+Contributors: UtcPay Payment 
+Tags: Ethereum,Tether,payments,UtcPay, cryptocurrency,payment gateway,multi-chain,Trustless
+Requires at least:       5.5  
+Tested up to:            6.3  
+Requires PHP:            7.0+
+WC requires at least:    4.9.4  
+WC tested up to:         8.1.1  
+Stable tag:              1.0.0
+License:                 GPLv2 or later
 
 ## Description
 
@@ -28,16 +26,16 @@ The details you provide during the account creation are confidential and securel
 
 ### Features
 
-- Receive crypto payments on your e-commerce store
+* Receive crypto payments on your e-commerce store
 
-- Very simple integration
+* Very simple integration
 
-- Low transaction fees
+* Low transaction fees
 
-- Customers can pay in any cryptocurrency, and it can be auto-converted
+* Customers can pay in any cryptocurrency, and it can be auto-converted
 
-- All sensitive data is encrypted
-
+* All sensitive data is encrypted
+  
 ## Installation
 
 ### Plugin installation
@@ -62,32 +60,40 @@ After you have installed the UtcPay Payment plugin, the configuration steps are:
 
 5.Click “Save changes” and the gateway will be active.
 
+## Frequently Asked Questions
+
+### It is safe？
+
+The details you provide during the account creation are confidential and securely encrypted. The details sent to the Placeholder Platform only include your ID, order ID, the amount involved, and the cryptocurrency used for the transaction. We take privacy seriously, and we never share your account or transaction details with anyone.
+
+### How can we contact support person？
+
+If you run into any problems, or if you simply wish to discuss something with our experts, make sure you [contact us](bd@utcpay.com) with your query, and someone will help you shortly.
+
 ## Support
 
-If you run into any problems, or if you simply wish to discuss something with our experts, make sure you contact us with your query, and someone will help you shortly.
+If you run into any problems, or if you simply wish to discuss something with our experts, make sure you [contact us](bd@utcpay.com) with your query, and someone will help you shortly.
 
-### Documents
+**Documents**
 
-- Official website：https://www.utcpay.com
+* Official website：https://www.utcpay.com
 
-- For developers：https://doc.utcpay.com
+* For developers：https://doc.utcpay.com
 
-### Social
+**Social**
 
-- BD Email: bd@utcpay.com
+* BD Email: bd@utcpay.com
+  
+* Twitter：https://twitter.com/UtcPay_Web3
 
-- Twitter：https://twitter.com/UtcPay_Web3
+* Discord：https://discord.gg/Hy9Vu3zR
 
-- Discord：https://discord.gg/Hy9Vu3zR
+* Medium：https://medium.com/@utcpay5
 
-- Medium：https://medium.com/@utcpay5
+* Telegram：https://t.me/UtcPay
 
-- Telegram：https://t.me/UtcPay
-
-- YouTobe：https://www.youtube.com/@UTCpay
+* YouTobe：https://www.youtube.com/@UTCpay
 
 ## Changelog
-
-1.0.0
-
-Initial commit
+### 1.0.0 
+* Initial commit
